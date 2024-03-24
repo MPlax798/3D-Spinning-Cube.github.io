@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Spinning Cube</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        canvas {
+            display: block;
+        }
+        .buttonContainer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+        }
+        .button:hover {
+            background-color: #a04545;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttonContainer">
+        <button class="button" onclick="loadTexture(0)">Site1</button><br>
+        <button class="button" onclick="loadTexture(1)">Site2</button><br>
+        <button class="button" onclick="loadTexture(2)">Site3</button><br>
+        <button class="button" onclick="loadTexture(3)">Site4</button><br>
+        <button class="button" onclick="loadTexture(4)">Site5</button><br>
+        <button class="button" onclick="loadTexture(5)">Site6</button><br>
+        <button class="button" onclick="toggleRotation('x')">Rotate X</button><br>
+        <button class="button" onclick="toggleRotation('y')">Rotate Y</button><br>
+        <button class="button" onclick="toggleRotation('z')">Rotate Z</button><br>
+        <button class="button" onclick="toggleRotation('all')">Rotate All</button><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
